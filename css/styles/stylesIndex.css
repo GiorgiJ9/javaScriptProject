@@ -1,0 +1,169 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("../../fonts/fontOne/Poppins-Regular.eot");
+  src: url("../../fonts/fontOne/Poppins-Regular.eot?#iefix") format("embedded-opentype"), url("../../fonts/fontOne/Poppins-Regular.woff2") format("woff2"), url("../../fonts/fontOne/Poppins-Regular.woff") format("woff"), url("../../fonts/fontOne/Poppins-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+body main, body header .headerBox .headerRightBox, body header .headerBox .headerMidBox .searchBox, body header .headerBox .headerLeftBox, body header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body header .headerBox .headerLeftBox .burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background: #ffffff;
+  font-family: "poppins";
+}
+body header {
+  height: 90px;
+}
+body header .headerBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80vw;
+}
+body header .headerBox .headerLeftBox {
+  gap: 16px;
+}
+body header .headerBox .headerLeftBox .burger {
+  background: #f3f9fb;
+  width: 48px;
+  height: 48px;
+  padding: 10px;
+  cursor: pointer;
+}
+body header .headerBox .headerLeftBox .burger .d1line,
+body header .headerBox .headerLeftBox .burger .d2line,
+body header .headerBox .headerLeftBox .burger .d3line {
+  height: 3px;
+  background: #008ecc;
+  border-radius: 15px;
+}
+body header .headerBox .headerLeftBox .burger .d2line {
+  width: 75%;
+}
+body header .headerBox .headerLeftBox .burger .d3line {
+  width: 50%;
+}
+body header .headerBox .headerLeftBox .logo a {
+  text-decoration: none;
+  font-weight: 800;
+  color: #008ecc;
+  font-size: 2.5rem;
+}
+body header .headerBox .headerMidBox {
+  width: 35%;
+}
+body header .headerBox .headerMidBox .searchBox {
+  font-size: 1.1rem;
+  background: #f3f9fb;
+  padding: 0px 10px;
+  border-radius: 3px;
+  height: 48px;
+  width: 100%;
+  gap: 10px;
+}
+body header .headerBox .headerMidBox .searchBox label {
+  cursor: pointer;
+  color: #008ecc;
+}
+body header .headerBox .headerMidBox .searchBox input {
+  outline: none;
+  border: none;
+  background: none;
+  font-size: 1.1rem;
+  width: 100%;
+  color: #008ecc;
+}
+body header .headerBox .headerRightBox {
+  gap: 10px;
+}
+body header .headerBox .headerRightBox .logInBox {
+  cursor: pointer;
+}
+body header .headerBox .headerRightBox .logInBox i {
+  color: #008ecc;
+}
+body header .headerBox .headerRightBox .vertLine {
+  width: 1px;
+  height: 28px;
+  background: #ededed;
+}
+body header .headerBox .headerRightBox .cartBox {
+  cursor: pointer;
+}
+body header .headerBox .headerRightBox .cartBox i {
+  color: #008ecc;
+}
+body main .mainBoxOne {
+  width: 80vw;
+  display: flex;
+  gap: 15px;
+  position: relative;
+  padding: 5px;
+}
+body main .mainBoxOne .card {
+  position: relative;
+  width: 225px;
+  height: 300px;
+  border-radius: 12px;
+  border: 1px solid #ededed;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body main .mainBoxOne .card:hover {
+  border: 1px solid #008ecc;
+}
+body main .mainBoxOne .card .cardDiscount {
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 0px;
+  background: #008ecc;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body main .mainBoxOne .card .productImage {
+  padding: 5px;
+}
+body main .mainBoxOne .card .productImage img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transform: translateY(40%);
+}
+body main .mainBoxOne .card .forNamePrice {
+  padding: 5px;
+}
+body main .mainBoxOne .card .forNamePrice .productDiscountPrice {
+  display: flex;
+  gap: 20px;
+}
+body main .mainBoxOne .card .forNamePrice .priceLine {
+  width: 100%;
+  height: 1px;
+  background: #ededed;
+}/*# sourceMappingURL=stylesIndex.css.map */
