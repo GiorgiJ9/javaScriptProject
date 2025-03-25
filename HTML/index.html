@@ -11,17 +11,12 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="../css/styles/stylesIndex.css" />
-    <title>onlineShop</title>
+    <title>MegaMart</title>
   </head>
-  <body>
+  <body data-page="main">
     <header>
       <div class="headerBox">
         <div class="headerLeftBox">
-          <div class="burger">
-            <div class="d1line"></div>
-            <div class="d2line"></div>
-            <div class="d3line"></div>
-          </div>
           <div class="logo">
             <a href="index.html"> MegaMart </a>
           </div>
@@ -44,6 +39,12 @@
             <i class="fa-regular fa-user"></i>
             <span>Sign Up / Sign In</span>
           </div>
+          <div class="logOutBox">
+            <div class="logOutBtn">
+              <img class="avatarImg" />
+              Log Out.
+            </div>
+          </div>
           <div class="vertLine"></div>
           <div class="cartBox">
             <i class="fa-cart-shopping fa-solid"></i>
@@ -53,31 +54,89 @@
       </div>
     </header>
     <main>
-      <!-- <div class="mainTopBox">
-        <div class="prev"><i class="fa-arrow-left fa-solid"></i></div>
-        <div class="card"></div>
-        <div class="next"><i class="fa-arrow-right fa-solid"></i></div>
-      </div> -->
-      <div class="mainBoxOne">
-        <!-- <div class="card">
-          <div class="cardDiscount">
-            <p></p>
-            <p></p>
-          </div>
-          <div class="productImage">
-          </div>
-          <div class="forNamePrice">
-            <div class="productName"></div>
-            <div class="productDiscountPrice">
-              <div class="price"></div>
-              <div class="discount"></div>
+      <div class="mainHeader">
+        <div class="category">
+          <div class="categotyDropDown">
+            <p>
+              Category
+              <i class="fa-solid fa-caret-down"></i>
+            </p>
+            <div class="categoryList">
+              <span class="filterLpatopBtn">LapTops</span>
+              <span class="filterMobileBtn">Mobiles</span>
             </div>
-            <div class="priceLine"></div>
-            <div class="saving"></div>
           </div>
-        </div> -->
+        </div>
+        <div class="brands">
+          <p>
+            Brands
+            <i class="fa-solid fa-caret-down" id="caretDown2"></i>
+          </p>
+          <div class="brandsList"></div>
+        </div>
       </div>
+      <div class="mainBox"></div>
     </main>
+    <div class="loginPopOut">
+      <div class="signIn">
+        <i class="fa-solid fa-xmark quit-sign-up-form"></i>
+        <h3>Sign In</h3>
+        <input type="email" name="logIn" id="logIn" placeholder="eMail" />
+        <input
+          type="password"
+          name="logIngPwd"
+          id="logInPwd"
+          placeholder="Password"
+        />
+        <div class="logInBtn myBtn">Sign In</div>
+        <div class="registerBtn">Register</div>
+      </div>
+      <div class="signInSuccessful">
+        Log In Successful !
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <div class="register">
+        <i class="fa-solid fa-xmark quit-sign-up-form"></i>
+        <h3>Registration</h3>
+        <input type="text" name="firstName" id="firstName" placeholder="Name" />
+        <input
+          type="text"
+          name="lastName"
+          id="lastName"
+          placeholder="Last Name"
+        />
+        <input type="number" name="age" id="age" placeholder="Age" />
+        <input type="email" name="email" id="email" placeholder="eMail" />
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Password"
+        />
+        <input type="text" name="address" id="address" placeholder="Address" />
+        <input type="tel" name="phone" id="phone" placeholder="Phone Number" />
+        <input
+          type="number"
+          name="zipcode"
+          id="zipcode"
+          placeholder="Zip Code"
+        />
+        <!-- <input type="file" name="avatar" id="avatar" /> -->
+        <div class="gender">
+          <label for="male">
+            <input type="radio" name="gender" id="male" checked value="MALE" />
+            Male
+          </label>
+          <label for="female">
+            <input type="radio" name="gender" id="female" value="FEMALE" />
+            Female
+          </label>
+        </div>
+        <div class="forReg myBtn">Register</div>
+        <div class="goBack">Back</div>
+      </div>
+    </div>
+    <div class="blurBG"></div>
     <script src="../javaScript/main.js"></script>
   </body>
 </html>

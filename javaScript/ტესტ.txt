@@ -1,0 +1,60 @@
+<div class="overlay"></div>
+//
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* მუქი ფონი */
+  z-index: 9; /* signIn-ზე მაღალი უნდა იყოს */
+}
+
+.show {
+  display: block !important;
+}
+
+.signIn {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10; /* overlay-ზე მაღალი უნდა იყოს */
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+
+//
+
+
+let overlay = document.querySelector(".overlay");
+
+logInBox.addEventListener("click", () => {
+  signIn.classList.toggle("show");
+  overlay.classList.toggle("show"); // Overlay-ს გამოჩენა
+  if (register.classList.contains("show")) {
+    register.classList.remove("show");
+  }
+});
+
+overlay.addEventListener("click", () => {
+  signIn.classList.remove("show");
+  register.classList.remove("show");
+  overlay.classList.remove("show"); // Overlay-ს დამალვა
+});
+
+xMark.forEach((x) => {
+  x.addEventListener("click", () => {
+    signIn.classList.remove("show");
+    register.classList.remove("show");
+    overlay.classList.remove("show"); // Overlay-ს დამალვა
+  });
+});
+
+goBack.addEventListener("click", () => {
+  register.classList.remove("show");
+  signIn.classList.add("show");
+});
