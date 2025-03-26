@@ -28,6 +28,166 @@ body {
       .headerLeftBox {
         @extend %flexCenter;
         gap: 16px;
+        .forBurger {
+          position: relative;
+          .fa-bars {
+            color: $primirayClr;
+            font-size: 2rem;
+            cursor: pointer;
+          }
+          .burgerContent {
+            position: absolute;
+            display: none;
+            align-items: center;
+            flex-direction: column;
+            background: $primaryTxtBg;
+            border: 1px solid $primirayClr;
+            border-radius: 8px;
+            gap: 100px;
+            color: $primirayClr;
+            z-index: 29;
+            height: 75vh;
+            width: 300px;
+            top: 60px;
+            .category {
+              width: 100%;
+              .categotyDropDown {
+                position: relative;
+                cursor: pointer;
+                p {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 5px;
+                  @extend %forCategory;
+                  &:hover {
+                    background: $primirayClr;
+                    color: $mainWhite;
+                  }
+                }
+                .categoryList {
+                  position: absolute;
+                  z-index: 9;
+                  top: 43px;
+                  gap: 5px;
+                  display: none;
+                  width: 100%;
+                  flex-direction: column;
+                  text-align: center;
+                  background: $primaryTxtBg;
+                  border-radius: 12px;
+                  height: 500px;
+                  span {
+                    text-decoration: none;
+                    border-radius: 10px;
+                    color: $primirayClr;
+                    background: $primaryTxtBg;
+                    line-height: 30px;
+                    &:hover {
+                      color: $mainWhite;
+                      background: $primirayClr;
+                    }
+                  }
+                }
+              }
+            }
+            .brands {
+              width: 100%;
+              position: relative;
+              text-align: center;
+              p {
+                cursor: pointer;
+                @extend %forCategory;
+                width: 100%;
+                &:hover {
+                  background: $primirayClr;
+                  color: $mainWhite;
+                }
+              }
+              .brandsList {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+                background: $primaryTxtBg;
+                z-index: 9;
+                top: 36px;
+                width: 100%;
+                border-radius: 8px;
+                span {
+                  cursor: pointer;
+                  @extend %forCategory;
+                  &:hover {
+                    background: $primirayClr;
+                    color: $mainWhite;
+                  }
+                }
+              }
+            }
+            .price {
+              display: flex;
+              flex-direction: column;
+              gap: 15px;
+              .minMax {
+                display: flex;
+                gap: 5px;
+                input {
+                  font-size: 1.1rem;
+                  max-width: 50px;
+                  border: 1px solid $primirayClr;
+                  border-radius: 3px;
+                  padding: 3px;
+                  &::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                  }
+                }
+              }
+              .forPriceFilter {
+                border: none;
+                background: $primaryTxtBg;
+                color: $primirayClr;
+                cursor: pointer;
+                padding: 10px;
+                border: 1px solid $primirayClr;
+                border-radius: 4px;
+                &:hover {
+                  color: $primaryTxtBg;
+                  background: $primirayClr;
+                }
+              }
+            }
+            .rating {
+              display: flex;
+              flex-direction: column;
+              gap: 15px;
+              .inpRate {
+                input {
+                  font-size: 1.1rem;
+                  max-width: 50px;
+                  border: 1px solid $primirayClr;
+                  border-radius: 3px;
+                  padding: 3px;
+                  &::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                  }
+                }
+              }
+              .forRatings {
+                border: none;
+                background: $primaryTxtBg;
+                color: $primirayClr;
+                cursor: pointer;
+                padding: 10px;
+                border: 1px solid $primirayClr;
+                border-radius: 4px;
+                &:hover {
+                  color: $primaryTxtBg;
+                  background: $primirayClr;
+                }
+              }
+            }
+          }
+        }
         .logo {
           a {
             text-decoration: none;
@@ -94,8 +254,25 @@ body {
           background: $linePrimaryClr;
         }
         .cartBox {
-          cursor: pointer;
-          color: $primirayClr;
+          a {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: $primirayClr;
+            text-decoration: none;
+            .cartCount {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 1px;
+              width: 25px;
+              height: 25px;
+              background: $primaryTxtBg;
+              border: $primirayClr 1px solid;
+              border-radius: 3px;
+            }
+          }
         }
       }
     }
@@ -104,74 +281,6 @@ body {
     @extend %flexCenter;
     flex-direction: column;
     gap: 25px;
-    .mainHeader {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: $primirayClr;
-      .category {
-        .categotyDropDown {
-          position: relative;
-          cursor: pointer;
-          p {
-            @extend %forCategory;
-            &:hover {
-              background: $primirayClr;
-              color: $mainWhite;
-            }
-          }
-          .categoryList {
-            position: absolute;
-            z-index: 9;
-            top: 35px;
-            gap: 5px;
-            display: none;
-            width: 100%;
-            flex-direction: column;
-            text-align: center;
-            background: $primaryTxtBg;
-            border-radius: 12px;
-            font-size: 1.1rem;
-            span {
-              text-decoration: none;
-              border-radius: 10px;
-              color: $primirayClr;
-              background: $primaryTxtBg;
-              &:hover {
-                color: $mainWhite;
-                background: $primirayClr;
-              }
-            }
-          }
-        }
-      }
-      .brands {
-        p {
-          cursor: pointer;
-          @extend %forCategory;
-          &:hover {
-            background: $primirayClr;
-            color: $mainWhite;
-          }
-        }
-        .brandsList{
-          display: none;
-          flex-direction: column;
-          align-items: center;
-          position: absolute;
-          background: $primaryTxtBg;
-          z-index: 9;
-          span {
-            cursor: pointer;
-            @extend %forCategory;
-            &:hover {
-              background: $primirayClr;
-              color: $mainWhite;
-            }
-          }
-        }
-      }
-    }
     .mainBox {
       width: 80vw;
       height: 100%;
@@ -187,7 +296,6 @@ body {
         height: 400px;
         border-radius: 12px;
         border: 1px solid $linePrimaryClr;
-        cursor: pointer;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -229,6 +337,7 @@ body {
           align-items: center;
           gap: 8px;
           .productName {
+            cursor: pointer;
             text-align: center;
           }
           .productDiscountPrice {
@@ -250,6 +359,9 @@ body {
           padding: 5px;
           display: flex;
           justify-content: space-between;
+          .addToCart {
+            cursor: pointer;
+          }
         }
       }
     }
@@ -305,6 +417,27 @@ body {
       }
     }
     .signInSuccessful {
+      font-size: 2rem;
+      margin: 0 auto;
+      width: 30vw;
+      border: 1px solid $primirayClr;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      border-radius: 12px;
+      position: absolute;
+      left: 35%;
+      padding: 10px;
+      color: $primirayClr;
+      background: $primaryTxtBg;
+      text-align: center;
+      i {
+        font-size: 3rem;
+        cursor: pointer;
+      }
+    }
+    .noSuccess {
       font-size: 2rem;
       margin: 0 auto;
       width: 30vw;

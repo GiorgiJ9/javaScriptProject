@@ -12,7 +12,7 @@ body main, body header .headerBox .headerRightBox, body header .headerBox .heade
   justify-content: center;
 }
 
-body main .mainHeader .brands .brandsList span, body main .mainHeader .brands p, body main .mainHeader .category .categotyDropDown p {
+body header .headerBox .headerLeftBox .forBurger .burgerContent .brands .brandsList span, body header .headerBox .headerLeftBox .forBurger .burgerContent .brands p, body header .headerBox .headerLeftBox .forBurger .burgerContent .category .categotyDropDown p {
   background: #f3f9fb;
   padding: 5px;
   border-radius: 6px;
@@ -64,6 +64,161 @@ body header .headerBox {
 }
 body header .headerBox .headerLeftBox {
   gap: 16px;
+}
+body header .headerBox .headerLeftBox .forBurger {
+  position: relative;
+}
+body header .headerBox .headerLeftBox .forBurger .fa-bars {
+  color: #008ecc;
+  font-size: 2rem;
+  cursor: pointer;
+}
+body header .headerBox .headerLeftBox .forBurger .burgerContent {
+  position: absolute;
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  background: #f3f9fb;
+  border: 1px solid #008ecc;
+  border-radius: 8px;
+  gap: 100px;
+  color: #008ecc;
+  z-index: 29;
+  height: 75vh;
+  width: 300px;
+  top: 60px;
+}
+body header .headerBox .headerLeftBox .forBurger .burgerContent .category {
+  width: 100%;
+}
+body header .headerBox .headerLeftBox .forBurger .burgerContent .category .categotyDropDown {
+  position: relative;
+  cursor: pointer;
+}
+body header .headerBox .headerLeftBox .forBurger .burgerContent .category .categotyDropDown p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+body header .headerBox .headerLeftBox .forBurger .burgerContent .category .categotyDropDown p:hover {
+  background: #008ecc;
+  color: #ffffff;
+}
+body header .headerBox .headerLeftBox .forBurger .burgerContent .category .categotyDropDown .categoryList {
+  position: absolute;
+  z-index: 9;
+  top: 43px;
+  gap: 5px;
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
+  background: #f3f9fb;
+  border-radius: 12px;
+  height: 500px;
+}
+body header .headerBox .headerLeftBox .forBurger .burgerContent .category .categotyDropDown .categoryList span {
+  text-decoration: none;
+  border-radius: 10px;
+  color: #008ecc;
+  background: #f3f9fb;
+  line-height: 30px;
+}
+body header .headerBox .headerLeftBox .forBurger .burgerContent .category .categotyDropDown .categoryList span:hover {
+  color: #ffffff;
+  background: #008ecc;
+}
+body header .headerBox .headerLeftBox .forBurger .burgerContent .brands {
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+body header .headerBox .headerLeftBox .forBurger .burgerContent .brands p {
+  cursor: pointer;
+  width: 100%;
+}
+body header .headerBox .headerLeftBox .forBurger .burgerContent .brands p:hover {
+  background: #008ecc;
+  color: #ffffff;
+}
+body header .headerBox .headerLeftBox .forBurger .burgerContent .brands .brandsList {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  background: #f3f9fb;
+  z-index: 9;
+  top: 36px;
+  width: 100%;
+  border-radius: 8px;
+}
+body header .headerBox .headerLeftBox .forBurger .burgerContent .brands .brandsList span {
+  cursor: pointer;
+}
+body header .headerBox .headerLeftBox .forBurger .burgerContent .brands .brandsList span:hover {
+  background: #008ecc;
+  color: #ffffff;
+}
+body header .headerBox .headerLeftBox .forBurger .burgerContent .price {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+body header .headerBox .headerLeftBox .forBurger .burgerContent .price .minMax {
+  display: flex;
+  gap: 5px;
+}
+body header .headerBox .headerLeftBox .forBurger .burgerContent .price .minMax input {
+  font-size: 1.1rem;
+  max-width: 50px;
+  border: 1px solid #008ecc;
+  border-radius: 3px;
+  padding: 3px;
+}
+body header .headerBox .headerLeftBox .forBurger .burgerContent .price .minMax input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+body header .headerBox .headerLeftBox .forBurger .burgerContent .price .forPriceFilter {
+  border: none;
+  background: #f3f9fb;
+  color: #008ecc;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #008ecc;
+  border-radius: 4px;
+}
+body header .headerBox .headerLeftBox .forBurger .burgerContent .price .forPriceFilter:hover {
+  color: #f3f9fb;
+  background: #008ecc;
+}
+body header .headerBox .headerLeftBox .forBurger .burgerContent .rating {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+body header .headerBox .headerLeftBox .forBurger .burgerContent .rating .inpRate input {
+  font-size: 1.1rem;
+  max-width: 50px;
+  border: 1px solid #008ecc;
+  border-radius: 3px;
+  padding: 3px;
+}
+body header .headerBox .headerLeftBox .forBurger .burgerContent .rating .inpRate input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+body header .headerBox .headerLeftBox .forBurger .burgerContent .rating .forRatings {
+  border: none;
+  background: #f3f9fb;
+  color: #008ecc;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #008ecc;
+  border-radius: 4px;
+}
+body header .headerBox .headerLeftBox .forBurger .burgerContent .rating .forRatings:hover {
+  color: #f3f9fb;
+  background: #008ecc;
 }
 body header .headerBox .headerLeftBox .logo a {
   text-decoration: none;
@@ -126,72 +281,28 @@ body header .headerBox .headerRightBox .vertLine {
   height: 28px;
   background: #ededed;
 }
-body header .headerBox .headerRightBox .cartBox {
+body header .headerBox .headerRightBox .cartBox a {
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
   color: #008ecc;
+  text-decoration: none;
+}
+body header .headerBox .headerRightBox .cartBox a .cartCount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1px;
+  width: 25px;
+  height: 25px;
+  background: #f3f9fb;
+  border: #008ecc 1px solid;
+  border-radius: 3px;
 }
 body main {
   flex-direction: column;
   gap: 25px;
-}
-body main .mainHeader {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: #008ecc;
-}
-body main .mainHeader .category .categotyDropDown {
-  position: relative;
-  cursor: pointer;
-}
-body main .mainHeader .category .categotyDropDown p:hover {
-  background: #008ecc;
-  color: #ffffff;
-}
-body main .mainHeader .category .categotyDropDown .categoryList {
-  position: absolute;
-  z-index: 9;
-  top: 35px;
-  gap: 5px;
-  display: none;
-  width: 100%;
-  flex-direction: column;
-  text-align: center;
-  background: #f3f9fb;
-  border-radius: 12px;
-  font-size: 1.1rem;
-}
-body main .mainHeader .category .categotyDropDown .categoryList span {
-  text-decoration: none;
-  border-radius: 10px;
-  color: #008ecc;
-  background: #f3f9fb;
-}
-body main .mainHeader .category .categotyDropDown .categoryList span:hover {
-  color: #ffffff;
-  background: #008ecc;
-}
-body main .mainHeader .brands p {
-  cursor: pointer;
-}
-body main .mainHeader .brands p:hover {
-  background: #008ecc;
-  color: #ffffff;
-}
-body main .mainHeader .brands .brandsList {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  position: absolute;
-  background: #f3f9fb;
-  z-index: 9;
-}
-body main .mainHeader .brands .brandsList span {
-  cursor: pointer;
-}
-body main .mainHeader .brands .brandsList span:hover {
-  background: #008ecc;
-  color: #ffffff;
 }
 body main .mainBox {
   width: 80vw;
@@ -209,7 +320,6 @@ body main .mainBox .card {
   height: 400px;
   border-radius: 12px;
   border: 1px solid #ededed;
-  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -255,6 +365,7 @@ body main .mainBox .card .forNamePrice {
   gap: 8px;
 }
 body main .mainBox .card .forNamePrice .productName {
+  cursor: pointer;
   text-align: center;
 }
 body main .mainBox .card .forNamePrice .productDiscountPrice {
@@ -276,6 +387,9 @@ body main .mainBox .card .rateAndCart {
   padding: 5px;
   display: flex;
   justify-content: space-between;
+}
+body main .mainBox .card .rateAndCart .addToCart {
+  cursor: pointer;
 }
 body .loginPopOut {
   position: absolute;
@@ -348,6 +462,27 @@ body .loginPopOut .signInSuccessful {
   text-align: center;
 }
 body .loginPopOut .signInSuccessful i {
+  font-size: 3rem;
+  cursor: pointer;
+}
+body .loginPopOut .noSuccess {
+  font-size: 2rem;
+  margin: 0 auto;
+  width: 30vw;
+  border: 1px solid #008ecc;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border-radius: 12px;
+  position: absolute;
+  left: 35%;
+  padding: 10px;
+  color: #008ecc;
+  background: #f3f9fb;
+  text-align: center;
+}
+body .loginPopOut .noSuccess i {
   font-size: 3rem;
   cursor: pointer;
 }
