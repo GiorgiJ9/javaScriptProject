@@ -442,7 +442,7 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch(`https://api.everrest.educata.dev/shop/products/id/${productId}`)
       .then((response) => response.json())
       .then((data) => {
-        // console.log("დეტალური ინფორმაცია:", data);
+        console.log("დეტალური ინფორმაცია:", data);
         // let productBox = document.querySelector(".productBox");
         let mainImageBox = document.querySelector(".mainImage");
         let subImagesBox = document.querySelector(".subImages");
@@ -487,22 +487,7 @@ document.addEventListener("DOMContentLoaded", () => {
         prodWarranty.textContent = `Warranty: ${data.warranty} years`;
         prodInStock.textContent = `In Stock: ${data.stock}`;
         prodDetails.textContent = `Details: ${data.description}`;
-        // ★
         prodRate.textContent = `Rate: ${data.rating.toFixed(1)} ★`;
-        // let revUserName = document.querySelector(".revUserName");
-        // let revUserRate = document.querySelector(".revUserRate");
-        // data.ratings.forEach((rating) => {});
       });
   }
 });
-// fetch("https://api.everrest.educata.dev/auth/all", {
-//   method: "GET",
-//   headers: {
-//     Authorization: `Bearer ${access_token}`,
-//     "Content-Type": "application/json",
-//   },
-// })
-//   .then((response) => response.json())
-//   .then((data) => {
-//     console.log(data);
-//   });

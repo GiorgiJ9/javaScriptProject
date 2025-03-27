@@ -6,19 +6,19 @@
   font-style: normal;
   font-display: swap;
 }
-#productPageBody main, #productPageBody header .headerBox .headerRightBox, #productPageBody header .headerBox .headerMidBox .searchBox, #productPageBody header .headerBox .headerLeftBox, #productPageBody header, #mainPageBody main, #mainPageBody header .headerBox .headerRightBox, #mainPageBody header .headerBox .headerMidBox .searchBox, #mainPageBody header .headerBox .headerLeftBox, #mainPageBody header {
+#cartPageBody header .headerBox .headerRightBox, #cartPageBody header .headerBox .headerMidBox .searchBox, #cartPageBody header .headerBox .headerLeftBox, #cartPageBody header, #productPageBody main, #productPageBody header .headerBox .headerRightBox, #productPageBody header .headerBox .headerMidBox .searchBox, #productPageBody header .headerBox .headerLeftBox, #productPageBody header, #mainPageBody main, #mainPageBody header .headerBox .headerRightBox, #mainPageBody header .headerBox .headerMidBox .searchBox, #mainPageBody header .headerBox .headerLeftBox, #mainPageBody header {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-#productPageBody header .headerBox .headerMidBox .forBurger .burgerContent .brands .brandsList span, #productPageBody header .headerBox .headerMidBox .forBurger .burgerContent .brands p, #productPageBody header .headerBox .headerMidBox .forBurger .burgerContent .category .categotyDropDown p, #mainPageBody header .headerBox .headerMidBox .forBurger .burgerContent .brands .brandsList span, #mainPageBody header .headerBox .headerMidBox .forBurger .burgerContent .brands p, #mainPageBody header .headerBox .headerMidBox .forBurger .burgerContent .category .categotyDropDown p {
+#cartPageBody header .headerBox .headerMidBox .forBurger .burgerContent .brands .brandsList span, #cartPageBody header .headerBox .headerMidBox .forBurger .burgerContent .brands p, #cartPageBody header .headerBox .headerMidBox .forBurger .burgerContent .category .categotyDropDown p, #productPageBody header .headerBox .headerMidBox .forBurger .burgerContent .brands .brandsList span, #productPageBody header .headerBox .headerMidBox .forBurger .burgerContent .brands p, #productPageBody header .headerBox .headerMidBox .forBurger .burgerContent .category .categotyDropDown p, #mainPageBody header .headerBox .headerMidBox .forBurger .burgerContent .brands .brandsList span, #mainPageBody header .headerBox .headerMidBox .forBurger .burgerContent .brands p, #mainPageBody header .headerBox .headerMidBox .forBurger .burgerContent .category .categotyDropDown p {
   background: #f3f9fb;
   padding: 5px;
   border-radius: 6px;
 }
 
-#productPageBody .loginPopOut .register .forReg, #productPageBody .loginPopOut .signIn .myBtn, #mainPageBody .loginPopOut .register .forReg, #mainPageBody .loginPopOut .signIn .myBtn {
+#cartPageBody .loginPopOut .register .forReg, #cartPageBody .loginPopOut .signIn .myBtn, #productPageBody .loginPopOut .register .forReg, #productPageBody .loginPopOut .signIn .myBtn, #mainPageBody .loginPopOut .register .forReg, #mainPageBody .loginPopOut .signIn .myBtn {
   cursor: pointer;
   border: 1px solid #008ecc;
   padding: 5px;
@@ -28,7 +28,7 @@
   color: #ffffff;
   background: #008ecc;
 }
-#productPageBody .loginPopOut .register .forReg:hover, #productPageBody .loginPopOut .signIn .myBtn:hover, #mainPageBody .loginPopOut .register .forReg:hover, #mainPageBody .loginPopOut .signIn .myBtn:hover {
+#cartPageBody .loginPopOut .register .forReg:hover, #cartPageBody .loginPopOut .signIn .myBtn:hover, #productPageBody .loginPopOut .register .forReg:hover, #productPageBody .loginPopOut .signIn .myBtn:hover, #mainPageBody .loginPopOut .register .forReg:hover, #mainPageBody .loginPopOut .signIn .myBtn:hover {
   color: #008ecc;
   background: #ffffff;
 }
@@ -942,6 +942,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 5px;
   max-width: 340px;
 }
@@ -1138,6 +1139,476 @@
   cursor: pointer;
 }
 #productPageBody .blurBG {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: absolute;
+  top: 0;
+  z-index: 9;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#cartPageBody {
+  background: #ffffff;
+  font-family: "poppins";
+  position: relative;
+}
+#cartPageBody .show {
+  display: flex !important;
+}
+#cartPageBody .hide {
+  display: none !important;
+}
+#cartPageBody .yTranslate {
+  transform: rotate(180deg) !important;
+}
+#cartPageBody header {
+  height: 90px;
+}
+#cartPageBody header .headerBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80vw;
+}
+#cartPageBody header .headerBox .headerLeftBox {
+  gap: 16px;
+}
+#cartPageBody header .headerBox .headerLeftBox .logo a {
+  text-decoration: none;
+  font-weight: 800;
+  color: #008ecc;
+  font-size: 2.5rem;
+}
+#cartPageBody header .headerBox .headerMidBox {
+  width: 35%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+#cartPageBody header .headerBox .headerMidBox .searchBox {
+  font-size: 1.1rem;
+  background: #f3f9fb;
+  padding: 0px 10px;
+  border-radius: 3px;
+  height: 48px;
+  width: 100%;
+  gap: 10px;
+}
+#cartPageBody header .headerBox .headerMidBox .searchBox label {
+  cursor: pointer;
+  color: #008ecc;
+}
+#cartPageBody header .headerBox .headerMidBox .searchBox input {
+  outline: none;
+  border: none;
+  background: none;
+  font-size: 1.1rem;
+  width: 100%;
+  color: #008ecc;
+}
+#cartPageBody header .headerBox .headerMidBox .forBurger {
+  position: relative;
+}
+#cartPageBody header .headerBox .headerMidBox .forBurger .fa-filter {
+  color: #008ecc;
+  padding: 5px;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+#cartPageBody header .headerBox .headerMidBox .forBurger .fa-filter:hover {
+  background: #008ecc;
+  color: #f3f9fb;
+}
+#cartPageBody header .headerBox .headerMidBox .forBurger .burgerContent {
+  position: absolute;
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  background: #f3f9fb;
+  border: 1px solid #008ecc;
+  border-radius: 8px;
+  gap: 100px;
+  color: #008ecc;
+  z-index: 29;
+  height: 75vh;
+  width: 300px;
+  top: 60px;
+  right: 0;
+}
+#cartPageBody header .headerBox .headerMidBox .forBurger .burgerContent .category {
+  width: 100%;
+}
+#cartPageBody header .headerBox .headerMidBox .forBurger .burgerContent .category .categotyDropDown {
+  position: relative;
+  cursor: pointer;
+}
+#cartPageBody header .headerBox .headerMidBox .forBurger .burgerContent .category .categotyDropDown p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+#cartPageBody header .headerBox .headerMidBox .forBurger .burgerContent .category .categotyDropDown p:hover {
+  background: #008ecc;
+  color: #ffffff;
+}
+#cartPageBody header .headerBox .headerMidBox .forBurger .burgerContent .category .categotyDropDown .categoryList {
+  position: absolute;
+  z-index: 9;
+  top: 43px;
+  gap: 5px;
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
+  background: #f3f9fb;
+  border-radius: 12px;
+  height: 500px;
+}
+#cartPageBody header .headerBox .headerMidBox .forBurger .burgerContent .category .categotyDropDown .categoryList span {
+  text-decoration: none;
+  border-radius: 10px;
+  color: #008ecc;
+  background: #f3f9fb;
+  line-height: 30px;
+}
+#cartPageBody header .headerBox .headerMidBox .forBurger .burgerContent .category .categotyDropDown .categoryList span:hover {
+  color: #ffffff;
+  background: #008ecc;
+}
+#cartPageBody header .headerBox .headerMidBox .forBurger .burgerContent .brands {
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+#cartPageBody header .headerBox .headerMidBox .forBurger .burgerContent .brands p {
+  cursor: pointer;
+  width: 100%;
+}
+#cartPageBody header .headerBox .headerMidBox .forBurger .burgerContent .brands p:hover {
+  background: #008ecc;
+  color: #ffffff;
+}
+#cartPageBody header .headerBox .headerMidBox .forBurger .burgerContent .brands .brandsList {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  background: #f3f9fb;
+  z-index: 9;
+  top: 36px;
+  width: 100%;
+  border-radius: 8px;
+}
+#cartPageBody header .headerBox .headerMidBox .forBurger .burgerContent .brands .brandsList span {
+  cursor: pointer;
+}
+#cartPageBody header .headerBox .headerMidBox .forBurger .burgerContent .brands .brandsList span:hover {
+  background: #008ecc;
+  color: #ffffff;
+}
+#cartPageBody header .headerBox .headerMidBox .forBurger .burgerContent .price {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#cartPageBody header .headerBox .headerMidBox .forBurger .burgerContent .price .minMax {
+  display: flex;
+  gap: 5px;
+}
+#cartPageBody header .headerBox .headerMidBox .forBurger .burgerContent .price .minMax input {
+  font-size: 1.1rem;
+  max-width: 50px;
+  border: 1px solid #008ecc;
+  border-radius: 3px;
+  padding: 3px;
+}
+#cartPageBody header .headerBox .headerMidBox .forBurger .burgerContent .price .minMax input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+#cartPageBody header .headerBox .headerMidBox .forBurger .burgerContent .price .forPriceFilter {
+  border: none;
+  background: #f3f9fb;
+  color: #008ecc;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #008ecc;
+  border-radius: 4px;
+}
+#cartPageBody header .headerBox .headerMidBox .forBurger .burgerContent .price .forPriceFilter:hover {
+  color: #f3f9fb;
+  background: #008ecc;
+}
+#cartPageBody header .headerBox .headerMidBox .forBurger .burgerContent .rating {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#cartPageBody header .headerBox .headerMidBox .forBurger .burgerContent .rating .inpRate input {
+  font-size: 1.1rem;
+  max-width: 50px;
+  border: 1px solid #008ecc;
+  border-radius: 3px;
+  padding: 3px;
+}
+#cartPageBody header .headerBox .headerMidBox .forBurger .burgerContent .rating .inpRate input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+#cartPageBody header .headerBox .headerMidBox .forBurger .burgerContent .rating .forRatings {
+  border: none;
+  background: #f3f9fb;
+  color: #008ecc;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #008ecc;
+  border-radius: 4px;
+}
+#cartPageBody header .headerBox .headerMidBox .forBurger .burgerContent .rating .forRatings:hover {
+  color: #f3f9fb;
+  background: #008ecc;
+}
+#cartPageBody header .headerBox .headerRightBox {
+  gap: 10px;
+}
+#cartPageBody header .headerBox .headerRightBox .logInBox {
+  color: #008ecc;
+  background: #f3f9fb;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 5px;
+}
+#cartPageBody header .headerBox .headerRightBox .logInBox:hover {
+  color: #ffffff;
+  background: #008ecc;
+}
+#cartPageBody header .headerBox .headerRightBox .logOutBox {
+  cursor: pointer;
+  display: none;
+  color: #008ecc;
+  background: #f3f9fb;
+  padding: 5px;
+  border-radius: 3px;
+}
+#cartPageBody header .headerBox .headerRightBox .logOutBox:hover {
+  background: #008ecc;
+  color: #f3f9fb;
+}
+#cartPageBody header .headerBox .headerRightBox .vertLine {
+  width: 1px;
+  height: 28px;
+  background: #ededed;
+}
+#cartPageBody header .headerBox .headerRightBox .cartBox a {
+  border: 1px solid #008ecc;
+  border-radius: 3px;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #008ecc;
+  text-decoration: none;
+}
+#cartPageBody header .headerBox .headerRightBox .cartBox a:hover {
+  background: #008ecc;
+  color: #f3f9fb;
+}
+#cartPageBody header .headerBox .headerRightBox .cartBox a .cartCount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1px;
+  width: 25px;
+  height: 25px;
+  background: #f3f9fb;
+  color: #008ecc;
+  border: #008ecc 1px solid;
+  border-radius: 3px;
+}
+#cartPageBody header .headerBox .controlPanel {
+  color: #008ecc;
+  font-size: 2rem;
+  display: none;
+  cursor: pointer;
+}
+@media (max-width: 1080px) {
+  #cartPageBody header .headerBox .controlPanel {
+    display: flex;
+    position: relative;
+  }
+  #cartPageBody header .headerBox .vertLine {
+    transform: rotate(90deg);
+  }
+  #cartPageBody header .headerBox .headerRightBox {
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    display: none;
+    flex-direction: column;
+    z-index: 39;
+    width: 300px;
+    padding: 15px;
+    background: #f3f9fb;
+    border-radius: 8px;
+  }
+}
+#cartPageBody .loginPopOut {
+  position: absolute;
+  top: 100px;
+  left: 35%;
+  z-index: 19;
+}
+#cartPageBody .loginPopOut .signIn {
+  margin: 0 auto;
+  width: 30vw;
+  border: 1px solid #008ecc;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border-radius: 12px;
+  position: absolute;
+  left: 35%;
+  padding: 10px;
+  color: #008ecc;
+  background: #f3f9fb;
+}
+#cartPageBody .loginPopOut .signIn i {
+  position: absolute;
+  cursor: pointer;
+  top: 10px;
+  right: 10px;
+  font-size: 1.2rem;
+}
+#cartPageBody .loginPopOut .signIn h3 {
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+#cartPageBody .loginPopOut .signIn input {
+  padding: 10px;
+  width: 90%;
+  border: 1px solid #008ecc;
+  border-radius: 8px;
+  outline: #008ecc;
+}
+#cartPageBody .loginPopOut .signIn input::-moz-placeholder {
+  color: #008ecc;
+}
+#cartPageBody .loginPopOut .signIn input::placeholder {
+  color: #008ecc;
+}
+#cartPageBody .loginPopOut .signIn input:invalid {
+  border: 1px solid #ff0000;
+}
+#cartPageBody .loginPopOut .signIn .registerBtn {
+  cursor: pointer;
+}
+#cartPageBody .loginPopOut .signInSuccessful {
+  font-size: 2rem;
+  margin: 0 auto;
+  width: 30vw;
+  border: 1px solid #008ecc;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border-radius: 12px;
+  position: absolute;
+  left: 35%;
+  padding: 10px;
+  color: #008ecc;
+  background: #f3f9fb;
+  text-align: center;
+}
+#cartPageBody .loginPopOut .signInSuccessful i {
+  font-size: 3rem;
+  cursor: pointer;
+}
+#cartPageBody .loginPopOut .noSuccess {
+  font-size: 2rem;
+  margin: 0 auto;
+  width: 30vw;
+  border: 1px solid #008ecc;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border-radius: 12px;
+  position: absolute;
+  left: 35%;
+  padding: 10px;
+  color: #008ecc;
+  background: #f3f9fb;
+  text-align: center;
+}
+#cartPageBody .loginPopOut .noSuccess i {
+  font-size: 3rem;
+  cursor: pointer;
+}
+#cartPageBody .loginPopOut .register {
+  margin: 0 auto;
+  width: 30vw;
+  border: 1px solid #008ecc;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border-radius: 12px;
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  padding: 10px;
+  color: #008ecc;
+  background: #f3f9fb;
+}
+#cartPageBody .loginPopOut .register i {
+  position: absolute;
+  cursor: pointer;
+  top: 10px;
+  right: 10px;
+  font-size: 1.2rem;
+}
+#cartPageBody .loginPopOut .register h3 {
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+#cartPageBody .loginPopOut .register input {
+  padding: 10px;
+  width: 90%;
+  border: 1px solid #008ecc;
+  border-radius: 8px;
+  outline: #008ecc;
+}
+#cartPageBody .loginPopOut .register input::-moz-placeholder {
+  color: #008ecc;
+}
+#cartPageBody .loginPopOut .register input::placeholder {
+  color: #008ecc;
+}
+#cartPageBody .loginPopOut .register input:invalid {
+  border: 1px solid #ff0000;
+}
+#cartPageBody .loginPopOut .register .gender {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+#cartPageBody .loginPopOut .register .gender label {
+  display: flex;
+  gap: 3px;
+  cursor: pointer;
+}
+#cartPageBody .loginPopOut .register .goBack {
+  cursor: pointer;
+}
+#cartPageBody .blurBG {
   width: 100%;
   height: 100%;
   display: none;
