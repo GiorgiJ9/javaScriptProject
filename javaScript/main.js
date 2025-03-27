@@ -16,7 +16,7 @@ let logOutBox = document.querySelector(".logOutBox");
 let avatarImg = document.querySelector(".avatarImg");
 let blurBG = document.querySelector(".blurBG");
 let allBtn = document.querySelector(".allProductsBtn");
-let burgerBtn = document.querySelector(".fa-bars");
+let burgerBtn = document.querySelector(".fa-filter");
 let burgerContent = document.querySelector(".burgerContent");
 burgerBtn.addEventListener("click", () => {
   burgerContent.classList.toggle("show");
@@ -206,7 +206,7 @@ function mainPage() {
       return response.json();
     })
     .then((data) => {
-      console.log("API-დან მიღებული პროდუქტი", data);
+      // console.log("API-დან მიღებული პროდუქტი:", data);
       let boxOne = document.querySelector(".mainBox");
       boxOne.innerHTML = "";
       data.products.forEach((element) => {
@@ -426,6 +426,15 @@ function createCardForItems(element, boxOne) {
       });
   });
 }
+let controlPanel = document.querySelector(".controlPanel");
+let headerRightBox = document.querySelector(".headerRightBox");
+if (window.innerWidth <= 1080) {
+  headerRightBox.remove();
+  controlPanel.appendChild(headerRightBox);
+}
+controlPanel.addEventListener("click", () => {
+  headerRightBox.classList.toggle("show");
+});
 document.addEventListener("DOMContentLoaded", () => {
   let params = new URLSearchParams(window.location.search);
   let productId = params.get("id");
@@ -433,11 +442,67 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch(`https://api.everrest.educata.dev/shop/products/id/${productId}`)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
-        let productBox = document.querySelector(".productBox");
-        let image = document.createElement("img");
-        image.setAttribute("src", data.images[1]);
-        productBox.appendChild(image);
+        // console.log("დეტალური ინფორმაცია:", data);
+        // let productBox = document.querySelector(".productBox");
+        let mainImageBox = document.querySelector(".mainImage");
+        let subImagesBox = document.querySelector(".subImages");
+        mainImg = document.createElement("img");
+        subImg = document.createElement("img");
+        if (data.images.length > 0) {
+          mainImg.src = data.images[0];
+          mainImageBox.appendChild(mainImg);
+        }
+        data.images.forEach((imgSrc) => {
+          let subImg = document.createElement("img");
+          subImg.src = imgSrc;
+          subImg.addEventListener("click", () => {
+            mainImg.src = imgSrc;
+          });
+          subImagesBox.appendChild(subImg);
+        });
+        function formatDate(isoString) {
+          let date = new Date(isoString);
+          let year = date.getFullYear();
+          let month = String(date.getMonth() + 1).padStart(2, "0");
+          let day = String(date.getDate()).padStart(2, "0");
+          return `${year}-${month}-${day}`;
+        }
+        let apiDate = data.issueDate;
+        let formatedDate = formatDate(apiDate);
+        let brandForm =
+          data.brand.charAt(0).toUpperCase() + data.brand.slice(1);
+        // let forDetails = document.querySelector(".forDetails");
+        let prodBrand = document.querySelector(".prodBrand");
+        let prodTitle = document.querySelector(".prodTitle");
+        let prodDate = document.querySelector(".prodDate");
+        let prodprice = document.querySelector(".prodprice");
+        let prodWarranty = document.querySelector(".prodWarranty");
+        let prodInStock = document.querySelector(".prodInStock");
+        let prodDetails = document.querySelector(".prodDetails");
+        let prodRate = document.querySelector(".prodRate");
+        prodBrand.textContent = `Brand: ${brandForm}`;
+        prodTitle.textContent = `Name: ${data.title}`;
+        prodDate.textContent = `Date: ${formatedDate}`;
+        prodprice.textContent = `${data.price.current} ${data.price.currency}`;
+        prodWarranty.textContent = `Warranty: ${data.warranty} years`;
+        prodInStock.textContent = `In Stock: ${data.stock}`;
+        prodDetails.textContent = `Details: ${data.description}`;
+        // ★
+        prodRate.textContent = `Rate: ${data.rating.toFixed(1)} ★`;
+        // let revUserName = document.querySelector(".revUserName");
+        // let revUserRate = document.querySelector(".revUserRate");
+        // data.ratings.forEach((rating) => {});
       });
   }
 });
+// fetch("https://api.everrest.educata.dev/auth/all", {
+//   method: "GET",
+//   headers: {
+//     Authorization: `Bearer ${access_token}`,
+//     "Content-Type": "application/json",
+//   },
+// })
+//   .then((response) => response.json())
+//   .then((data) => {
+//     console.log(data);
+//   });

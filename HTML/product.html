@@ -13,12 +13,28 @@
     <link rel="stylesheet" href="../css/styles/stylesIndex.css" />
     <title>MegaMart</title>
   </head>
-  <body data-page="product">
+  <body data-page="product" id="productPageBody">
     <header>
       <div class="headerBox">
         <div class="headerLeftBox">
+          <div class="logo">
+            <a href="index.html"> MegaMart </a>
+          </div>
+        </div>
+        <div class="headerMidBox">
+          <div class="searchBox">
+            <label for="srch">
+              <i class="fa-magnifying-glass fa-solid"></i>
+            </label>
+            <input
+              type="search"
+              name="srch"
+              id="srch"
+              placeholder="Search..."
+            />
+          </div>
           <div class="forBurger">
-            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-filter"></i>
             <div class="burgerContent">
               <div class="category">
                 <div class="categotyDropDown">
@@ -78,22 +94,6 @@
               </div>
             </div>
           </div>
-          <div class="logo">
-            <a href="index.html"> MegaMart </a>
-          </div>
-        </div>
-        <div class="headerMidBox">
-          <div class="searchBox">
-            <label for="srch">
-              <i class="fa-magnifying-glass fa-solid"></i>
-            </label>
-            <input
-              type="search"
-              name="srch"
-              id="srch"
-              placeholder="Search..."
-            />
-          </div>
         </div>
         <div class="headerRightBox">
           <div class="logInBox">
@@ -115,11 +115,40 @@
             </a>
           </div>
         </div>
+        <div class="controlPanel">
+          <i class="fa-solid fa-bars"></i>
+        </div>
       </div>
     </header>
     <main>
-      <div class="productBox"></div>
-      <div class="mainBox"></div>
+      <div class="productBox">
+        <div class="detailImages">
+          <div class="mainImage"></div>
+          <div class="subImages"></div>
+        </div>
+        <div class="forDetails">
+          <div class="prodBrand"></div>
+          <div class="prodTitle"></div>
+          <div class="prodDate"></div>
+          <div class="prodprice"></div>
+          <div class="prodWarranty"></div>
+          <div class="stockAndCart">
+            <div class="prodInStock"></div>
+            <div class="prodAddToCart">
+              <i class="fa-cart-shopping fa-solid"></i>
+              Add To Cart
+            </div>
+          </div>
+          <div class="prodDetailsAndRate">
+            <div class="prodDetails"></div>
+            <div class="prodRate"></div>
+          </div>
+        </div>
+      </div>
+      <div class="reviewBox">
+        <div class="revUserName"></div>
+        <div class="revUserRate"></div>
+      </div>
     </main>
     <div class="loginPopOut">
       <div class="signIn">

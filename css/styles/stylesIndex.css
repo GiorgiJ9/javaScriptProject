@@ -6,19 +6,19 @@
   font-style: normal;
   font-display: swap;
 }
-body main, body header .headerBox .headerRightBox, body header .headerBox .headerMidBox .searchBox, body header .headerBox .headerLeftBox, body header {
+#productPageBody main, #productPageBody header .headerBox .headerRightBox, #productPageBody header .headerBox .headerMidBox .searchBox, #productPageBody header .headerBox .headerLeftBox, #productPageBody header, #mainPageBody main, #mainPageBody header .headerBox .headerRightBox, #mainPageBody header .headerBox .headerMidBox .searchBox, #mainPageBody header .headerBox .headerLeftBox, #mainPageBody header {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-body header .headerBox .headerLeftBox .forBurger .burgerContent .brands .brandsList span, body header .headerBox .headerLeftBox .forBurger .burgerContent .brands p, body header .headerBox .headerLeftBox .forBurger .burgerContent .category .categotyDropDown p {
+#productPageBody header .headerBox .headerMidBox .forBurger .burgerContent .brands .brandsList span, #productPageBody header .headerBox .headerMidBox .forBurger .burgerContent .brands p, #productPageBody header .headerBox .headerMidBox .forBurger .burgerContent .category .categotyDropDown p, #mainPageBody header .headerBox .headerMidBox .forBurger .burgerContent .brands .brandsList span, #mainPageBody header .headerBox .headerMidBox .forBurger .burgerContent .brands p, #mainPageBody header .headerBox .headerMidBox .forBurger .burgerContent .category .categotyDropDown p {
   background: #f3f9fb;
   padding: 5px;
   border-radius: 6px;
 }
 
-body .loginPopOut .register .forReg, body .loginPopOut .signIn .myBtn {
+#productPageBody .loginPopOut .register .forReg, #productPageBody .loginPopOut .signIn .myBtn, #mainPageBody .loginPopOut .register .forReg, #mainPageBody .loginPopOut .signIn .myBtn {
   cursor: pointer;
   border: 1px solid #008ecc;
   padding: 5px;
@@ -28,7 +28,7 @@ body .loginPopOut .register .forReg, body .loginPopOut .signIn .myBtn {
   color: #ffffff;
   background: #008ecc;
 }
-body .loginPopOut .register .forReg:hover, body .loginPopOut .signIn .myBtn:hover {
+#productPageBody .loginPopOut .register .forReg:hover, #productPageBody .loginPopOut .signIn .myBtn:hover, #mainPageBody .loginPopOut .register .forReg:hover, #mainPageBody .loginPopOut .signIn .myBtn:hover {
   color: #008ecc;
   background: #ffffff;
 }
@@ -39,41 +39,80 @@ body .loginPopOut .register .forReg:hover, body .loginPopOut .signIn .myBtn:hove
   margin: 0px;
 }
 
-body {
+#mainPageBody {
   background: #ffffff;
   font-family: "poppins";
   position: relative;
 }
-body .show {
+#mainPageBody .show {
   display: flex !important;
 }
-body .hide {
+#mainPageBody .hide {
   display: none !important;
 }
-body .yTranslate {
+#mainPageBody .yTranslate {
   transform: rotate(180deg) !important;
 }
-body header {
+#mainPageBody header {
   height: 90px;
 }
-body header .headerBox {
+#mainPageBody header .headerBox {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 80vw;
 }
-body header .headerBox .headerLeftBox {
+#mainPageBody header .headerBox .headerLeftBox {
   gap: 16px;
 }
-body header .headerBox .headerLeftBox .forBurger {
+#mainPageBody header .headerBox .headerLeftBox .logo a {
+  text-decoration: none;
+  font-weight: 800;
+  color: #008ecc;
+  font-size: 2.5rem;
+}
+#mainPageBody header .headerBox .headerMidBox {
+  width: 35%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+#mainPageBody header .headerBox .headerMidBox .searchBox {
+  font-size: 1.1rem;
+  background: #f3f9fb;
+  padding: 0px 10px;
+  border-radius: 3px;
+  height: 48px;
+  width: 100%;
+  gap: 10px;
+}
+#mainPageBody header .headerBox .headerMidBox .searchBox label {
+  cursor: pointer;
+  color: #008ecc;
+}
+#mainPageBody header .headerBox .headerMidBox .searchBox input {
+  outline: none;
+  border: none;
+  background: none;
+  font-size: 1.1rem;
+  width: 100%;
+  color: #008ecc;
+}
+#mainPageBody header .headerBox .headerMidBox .forBurger {
   position: relative;
 }
-body header .headerBox .headerLeftBox .forBurger .fa-bars {
+#mainPageBody header .headerBox .headerMidBox .forBurger .fa-filter {
   color: #008ecc;
+  padding: 5px;
   font-size: 2rem;
   cursor: pointer;
+  border-radius: 5px;
 }
-body header .headerBox .headerLeftBox .forBurger .burgerContent {
+#mainPageBody header .headerBox .headerMidBox .forBurger .fa-filter:hover {
+  background: #008ecc;
+  color: #f3f9fb;
+}
+#mainPageBody header .headerBox .headerMidBox .forBurger .burgerContent {
   position: absolute;
   display: none;
   align-items: center;
@@ -87,25 +126,26 @@ body header .headerBox .headerLeftBox .forBurger .burgerContent {
   height: 75vh;
   width: 300px;
   top: 60px;
+  right: 0;
 }
-body header .headerBox .headerLeftBox .forBurger .burgerContent .category {
+#mainPageBody header .headerBox .headerMidBox .forBurger .burgerContent .category {
   width: 100%;
 }
-body header .headerBox .headerLeftBox .forBurger .burgerContent .category .categotyDropDown {
+#mainPageBody header .headerBox .headerMidBox .forBurger .burgerContent .category .categotyDropDown {
   position: relative;
   cursor: pointer;
 }
-body header .headerBox .headerLeftBox .forBurger .burgerContent .category .categotyDropDown p {
+#mainPageBody header .headerBox .headerMidBox .forBurger .burgerContent .category .categotyDropDown p {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 5px;
 }
-body header .headerBox .headerLeftBox .forBurger .burgerContent .category .categotyDropDown p:hover {
+#mainPageBody header .headerBox .headerMidBox .forBurger .burgerContent .category .categotyDropDown p:hover {
   background: #008ecc;
   color: #ffffff;
 }
-body header .headerBox .headerLeftBox .forBurger .burgerContent .category .categotyDropDown .categoryList {
+#mainPageBody header .headerBox .headerMidBox .forBurger .burgerContent .category .categotyDropDown .categoryList {
   position: absolute;
   z-index: 9;
   top: 43px;
@@ -118,31 +158,31 @@ body header .headerBox .headerLeftBox .forBurger .burgerContent .category .categ
   border-radius: 12px;
   height: 500px;
 }
-body header .headerBox .headerLeftBox .forBurger .burgerContent .category .categotyDropDown .categoryList span {
+#mainPageBody header .headerBox .headerMidBox .forBurger .burgerContent .category .categotyDropDown .categoryList span {
   text-decoration: none;
   border-radius: 10px;
   color: #008ecc;
   background: #f3f9fb;
   line-height: 30px;
 }
-body header .headerBox .headerLeftBox .forBurger .burgerContent .category .categotyDropDown .categoryList span:hover {
+#mainPageBody header .headerBox .headerMidBox .forBurger .burgerContent .category .categotyDropDown .categoryList span:hover {
   color: #ffffff;
   background: #008ecc;
 }
-body header .headerBox .headerLeftBox .forBurger .burgerContent .brands {
+#mainPageBody header .headerBox .headerMidBox .forBurger .burgerContent .brands {
   width: 100%;
   position: relative;
   text-align: center;
 }
-body header .headerBox .headerLeftBox .forBurger .burgerContent .brands p {
+#mainPageBody header .headerBox .headerMidBox .forBurger .burgerContent .brands p {
   cursor: pointer;
   width: 100%;
 }
-body header .headerBox .headerLeftBox .forBurger .burgerContent .brands p:hover {
+#mainPageBody header .headerBox .headerMidBox .forBurger .burgerContent .brands p:hover {
   background: #008ecc;
   color: #ffffff;
 }
-body header .headerBox .headerLeftBox .forBurger .burgerContent .brands .brandsList {
+#mainPageBody header .headerBox .headerMidBox .forBurger .burgerContent .brands .brandsList {
   display: none;
   flex-direction: column;
   align-items: center;
@@ -153,33 +193,33 @@ body header .headerBox .headerLeftBox .forBurger .burgerContent .brands .brandsL
   width: 100%;
   border-radius: 8px;
 }
-body header .headerBox .headerLeftBox .forBurger .burgerContent .brands .brandsList span {
+#mainPageBody header .headerBox .headerMidBox .forBurger .burgerContent .brands .brandsList span {
   cursor: pointer;
 }
-body header .headerBox .headerLeftBox .forBurger .burgerContent .brands .brandsList span:hover {
+#mainPageBody header .headerBox .headerMidBox .forBurger .burgerContent .brands .brandsList span:hover {
   background: #008ecc;
   color: #ffffff;
 }
-body header .headerBox .headerLeftBox .forBurger .burgerContent .price {
+#mainPageBody header .headerBox .headerMidBox .forBurger .burgerContent .price {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-body header .headerBox .headerLeftBox .forBurger .burgerContent .price .minMax {
+#mainPageBody header .headerBox .headerMidBox .forBurger .burgerContent .price .minMax {
   display: flex;
   gap: 5px;
 }
-body header .headerBox .headerLeftBox .forBurger .burgerContent .price .minMax input {
+#mainPageBody header .headerBox .headerMidBox .forBurger .burgerContent .price .minMax input {
   font-size: 1.1rem;
   max-width: 50px;
   border: 1px solid #008ecc;
   border-radius: 3px;
   padding: 3px;
 }
-body header .headerBox .headerLeftBox .forBurger .burgerContent .price .minMax input::-webkit-inner-spin-button {
+#mainPageBody header .headerBox .headerMidBox .forBurger .burgerContent .price .minMax input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
-body header .headerBox .headerLeftBox .forBurger .burgerContent .price .forPriceFilter {
+#mainPageBody header .headerBox .headerMidBox .forBurger .burgerContent .price .forPriceFilter {
   border: none;
   background: #f3f9fb;
   color: #008ecc;
@@ -188,26 +228,26 @@ body header .headerBox .headerLeftBox .forBurger .burgerContent .price .forPrice
   border: 1px solid #008ecc;
   border-radius: 4px;
 }
-body header .headerBox .headerLeftBox .forBurger .burgerContent .price .forPriceFilter:hover {
+#mainPageBody header .headerBox .headerMidBox .forBurger .burgerContent .price .forPriceFilter:hover {
   color: #f3f9fb;
   background: #008ecc;
 }
-body header .headerBox .headerLeftBox .forBurger .burgerContent .rating {
+#mainPageBody header .headerBox .headerMidBox .forBurger .burgerContent .rating {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-body header .headerBox .headerLeftBox .forBurger .burgerContent .rating .inpRate input {
+#mainPageBody header .headerBox .headerMidBox .forBurger .burgerContent .rating .inpRate input {
   font-size: 1.1rem;
   max-width: 50px;
   border: 1px solid #008ecc;
   border-radius: 3px;
   padding: 3px;
 }
-body header .headerBox .headerLeftBox .forBurger .burgerContent .rating .inpRate input::-webkit-inner-spin-button {
+#mainPageBody header .headerBox .headerMidBox .forBurger .burgerContent .rating .inpRate input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
-body header .headerBox .headerLeftBox .forBurger .burgerContent .rating .forRatings {
+#mainPageBody header .headerBox .headerMidBox .forBurger .burgerContent .rating .forRatings {
   border: none;
   background: #f3f9fb;
   color: #008ecc;
@@ -216,55 +256,25 @@ body header .headerBox .headerLeftBox .forBurger .burgerContent .rating .forRati
   border: 1px solid #008ecc;
   border-radius: 4px;
 }
-body header .headerBox .headerLeftBox .forBurger .burgerContent .rating .forRatings:hover {
+#mainPageBody header .headerBox .headerMidBox .forBurger .burgerContent .rating .forRatings:hover {
   color: #f3f9fb;
   background: #008ecc;
 }
-body header .headerBox .headerLeftBox .logo a {
-  text-decoration: none;
-  font-weight: 800;
-  color: #008ecc;
-  font-size: 2.5rem;
-}
-body header .headerBox .headerMidBox {
-  width: 35%;
-}
-body header .headerBox .headerMidBox .searchBox {
-  font-size: 1.1rem;
-  background: #f3f9fb;
-  padding: 0px 10px;
-  border-radius: 3px;
-  height: 48px;
-  width: 100%;
+#mainPageBody header .headerBox .headerRightBox {
   gap: 10px;
 }
-body header .headerBox .headerMidBox .searchBox label {
-  cursor: pointer;
-  color: #008ecc;
-}
-body header .headerBox .headerMidBox .searchBox input {
-  outline: none;
-  border: none;
-  background: none;
-  font-size: 1.1rem;
-  width: 100%;
-  color: #008ecc;
-}
-body header .headerBox .headerRightBox {
-  gap: 10px;
-}
-body header .headerBox .headerRightBox .logInBox {
+#mainPageBody header .headerBox .headerRightBox .logInBox {
   color: #008ecc;
   background: #f3f9fb;
   cursor: pointer;
   border-radius: 3px;
   padding: 5px;
 }
-body header .headerBox .headerRightBox .logInBox:hover {
+#mainPageBody header .headerBox .headerRightBox .logInBox:hover {
   color: #ffffff;
   background: #008ecc;
 }
-body header .headerBox .headerRightBox .logOutBox {
+#mainPageBody header .headerBox .headerRightBox .logOutBox {
   cursor: pointer;
   display: none;
   color: #008ecc;
@@ -272,16 +282,19 @@ body header .headerBox .headerRightBox .logOutBox {
   padding: 5px;
   border-radius: 3px;
 }
-body header .headerBox .headerRightBox .logOutBox:hover {
+#mainPageBody header .headerBox .headerRightBox .logOutBox:hover {
   background: #008ecc;
   color: #f3f9fb;
 }
-body header .headerBox .headerRightBox .vertLine {
+#mainPageBody header .headerBox .headerRightBox .vertLine {
   width: 1px;
   height: 28px;
   background: #ededed;
 }
-body header .headerBox .headerRightBox .cartBox a {
+#mainPageBody header .headerBox .headerRightBox .cartBox a {
+  border: 1px solid #008ecc;
+  border-radius: 3px;
+  padding: 5px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -289,7 +302,11 @@ body header .headerBox .headerRightBox .cartBox a {
   color: #008ecc;
   text-decoration: none;
 }
-body header .headerBox .headerRightBox .cartBox a .cartCount {
+#mainPageBody header .headerBox .headerRightBox .cartBox a:hover {
+  background: #008ecc;
+  color: #f3f9fb;
+}
+#mainPageBody header .headerBox .headerRightBox .cartBox a .cartCount {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -297,14 +314,43 @@ body header .headerBox .headerRightBox .cartBox a .cartCount {
   width: 25px;
   height: 25px;
   background: #f3f9fb;
+  color: #008ecc;
   border: #008ecc 1px solid;
   border-radius: 3px;
 }
-body main {
+#mainPageBody header .headerBox .controlPanel {
+  color: #008ecc;
+  font-size: 2rem;
+  display: none;
+  cursor: pointer;
+}
+@media (max-width: 1080px) {
+  #mainPageBody header .headerBox .controlPanel {
+    display: flex;
+    position: relative;
+  }
+  #mainPageBody header .headerBox .vertLine {
+    transform: rotate(90deg);
+  }
+  #mainPageBody header .headerBox .headerRightBox {
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    display: none;
+    flex-direction: column;
+    z-index: 39;
+    width: 300px;
+    padding: 15px;
+    background: #f3f9fb;
+    border-radius: 8px;
+  }
+}
+#mainPageBody main {
   flex-direction: column;
   gap: 25px;
 }
-body main .mainBox {
+#mainPageBody main .mainBox {
   width: 80vw;
   height: 100%;
   position: relative;
@@ -313,7 +359,7 @@ body main .mainBox {
   gap: 15px;
   padding: 5px;
 }
-body main .mainBox .card {
+#mainPageBody main .mainBox .card {
   margin: 0 auto;
   position: relative;
   width: 250px;
@@ -324,14 +370,14 @@ body main .mainBox .card {
   flex-direction: column;
   justify-content: space-between;
 }
-body main .mainBox .card:hover {
+#mainPageBody main .mainBox .card:hover {
   border: 1px solid #008ecc;
 }
-body main .mainBox .card:hover .productName {
+#mainPageBody main .mainBox .card:hover .productName {
   -webkit-text-decoration: underline #008ecc;
           text-decoration: underline #008ecc;
 }
-body main .mainBox .card .cardDiscount {
+#mainPageBody main .mainBox .card .cardDiscount {
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
   padding: 1px;
@@ -346,17 +392,17 @@ body main .mainBox .card .cardDiscount {
   align-items: center;
   flex-direction: column;
 }
-body main .mainBox .card .productImage {
+#mainPageBody main .mainBox .card .productImage {
   padding: 5px;
   max-height: 210px;
 }
-body main .mainBox .card .productImage img {
+#mainPageBody main .mainBox .card .productImage img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
-body main .mainBox .card .forNamePrice {
+#mainPageBody main .mainBox .card .forNamePrice {
   padding: 5px;
   color: #008ecc;
   display: flex;
@@ -364,40 +410,40 @@ body main .mainBox .card .forNamePrice {
   align-items: center;
   gap: 8px;
 }
-body main .mainBox .card .forNamePrice .productName {
+#mainPageBody main .mainBox .card .forNamePrice .productName {
   cursor: pointer;
   text-align: center;
 }
-body main .mainBox .card .forNamePrice .productDiscountPrice {
+#mainPageBody main .mainBox .card .forNamePrice .productDiscountPrice {
   display: flex;
   align-items: center;
   gap: 5px;
 }
-body main .mainBox .card .forNamePrice .productDiscountPrice .price {
+#mainPageBody main .mainBox .card .forNamePrice .productDiscountPrice .price {
   font-size: 0.8rem;
   -webkit-text-decoration: line-through #ff0000;
           text-decoration: line-through #ff0000;
 }
-body main .mainBox .card .forNamePrice .productDiscountPrice .discount {
+#mainPageBody main .mainBox .card .forNamePrice .productDiscountPrice .discount {
   font-weight: 700;
   font-size: 1.1rem;
 }
-body main .mainBox .card .rateAndCart {
+#mainPageBody main .mainBox .card .rateAndCart {
   color: #008ecc;
   padding: 5px;
   display: flex;
   justify-content: space-between;
 }
-body main .mainBox .card .rateAndCart .addToCart {
+#mainPageBody main .mainBox .card .rateAndCart .addToCart {
   cursor: pointer;
 }
-body .loginPopOut {
+#mainPageBody .loginPopOut {
   position: absolute;
   top: 100px;
   left: 35%;
   z-index: 19;
 }
-body .loginPopOut .signIn {
+#mainPageBody .loginPopOut .signIn {
   margin: 0 auto;
   width: 30vw;
   border: 1px solid #008ecc;
@@ -412,39 +458,39 @@ body .loginPopOut .signIn {
   color: #008ecc;
   background: #f3f9fb;
 }
-body .loginPopOut .signIn i {
+#mainPageBody .loginPopOut .signIn i {
   position: absolute;
   cursor: pointer;
   top: 10px;
   right: 10px;
   font-size: 1.2rem;
 }
-body .loginPopOut .signIn h3 {
+#mainPageBody .loginPopOut .signIn h3 {
   text-align: center;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
 }
-body .loginPopOut .signIn input {
+#mainPageBody .loginPopOut .signIn input {
   padding: 10px;
   width: 90%;
   border: 1px solid #008ecc;
   border-radius: 8px;
   outline: #008ecc;
 }
-body .loginPopOut .signIn input::-moz-placeholder {
+#mainPageBody .loginPopOut .signIn input::-moz-placeholder {
   color: #008ecc;
 }
-body .loginPopOut .signIn input::placeholder {
+#mainPageBody .loginPopOut .signIn input::placeholder {
   color: #008ecc;
 }
-body .loginPopOut .signIn input:invalid {
+#mainPageBody .loginPopOut .signIn input:invalid {
   border: 1px solid #ff0000;
 }
-body .loginPopOut .signIn .registerBtn {
+#mainPageBody .loginPopOut .signIn .registerBtn {
   cursor: pointer;
 }
-body .loginPopOut .signInSuccessful {
+#mainPageBody .loginPopOut .signInSuccessful {
   font-size: 2rem;
   margin: 0 auto;
   width: 30vw;
@@ -461,11 +507,11 @@ body .loginPopOut .signInSuccessful {
   background: #f3f9fb;
   text-align: center;
 }
-body .loginPopOut .signInSuccessful i {
+#mainPageBody .loginPopOut .signInSuccessful i {
   font-size: 3rem;
   cursor: pointer;
 }
-body .loginPopOut .noSuccess {
+#mainPageBody .loginPopOut .noSuccess {
   font-size: 2rem;
   margin: 0 auto;
   width: 30vw;
@@ -482,11 +528,11 @@ body .loginPopOut .noSuccess {
   background: #f3f9fb;
   text-align: center;
 }
-body .loginPopOut .noSuccess i {
+#mainPageBody .loginPopOut .noSuccess i {
   font-size: 3rem;
   cursor: pointer;
 }
-body .loginPopOut .register {
+#mainPageBody .loginPopOut .register {
   margin: 0 auto;
   width: 30vw;
   border: 1px solid #008ecc;
@@ -502,49 +548,596 @@ body .loginPopOut .register {
   color: #008ecc;
   background: #f3f9fb;
 }
-body .loginPopOut .register i {
+#mainPageBody .loginPopOut .register i {
   position: absolute;
   cursor: pointer;
   top: 10px;
   right: 10px;
   font-size: 1.2rem;
 }
-body .loginPopOut .register h3 {
+#mainPageBody .loginPopOut .register h3 {
   text-align: center;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
 }
-body .loginPopOut .register input {
+#mainPageBody .loginPopOut .register input {
   padding: 10px;
   width: 90%;
   border: 1px solid #008ecc;
   border-radius: 8px;
   outline: #008ecc;
 }
-body .loginPopOut .register input::-moz-placeholder {
+#mainPageBody .loginPopOut .register input::-moz-placeholder {
   color: #008ecc;
 }
-body .loginPopOut .register input::placeholder {
+#mainPageBody .loginPopOut .register input::placeholder {
   color: #008ecc;
 }
-body .loginPopOut .register input:invalid {
+#mainPageBody .loginPopOut .register input:invalid {
   border: 1px solid #ff0000;
 }
-body .loginPopOut .register .gender {
+#mainPageBody .loginPopOut .register .gender {
   display: flex;
   gap: 25px;
   justify-content: center;
 }
-body .loginPopOut .register .gender label {
+#mainPageBody .loginPopOut .register .gender label {
   display: flex;
   gap: 3px;
   cursor: pointer;
 }
-body .loginPopOut .register .goBack {
+#mainPageBody .loginPopOut .register .goBack {
   cursor: pointer;
 }
-body .blurBG {
+#mainPageBody .blurBG {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: absolute;
+  top: 0;
+  z-index: 9;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#productPageBody {
+  background: #ffffff;
+  font-family: "poppins";
+  position: relative;
+}
+#productPageBody .show {
+  display: flex !important;
+}
+#productPageBody .hide {
+  display: none !important;
+}
+#productPageBody .yTranslate {
+  transform: rotate(180deg) !important;
+}
+#productPageBody header {
+  height: 90px;
+}
+#productPageBody header .headerBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80vw;
+}
+#productPageBody header .headerBox .headerLeftBox {
+  gap: 16px;
+}
+#productPageBody header .headerBox .headerLeftBox .logo a {
+  text-decoration: none;
+  font-weight: 800;
+  color: #008ecc;
+  font-size: 2.5rem;
+}
+#productPageBody header .headerBox .headerMidBox {
+  width: 35%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+#productPageBody header .headerBox .headerMidBox .searchBox {
+  font-size: 1.1rem;
+  background: #f3f9fb;
+  padding: 0px 10px;
+  border-radius: 3px;
+  height: 48px;
+  width: 100%;
+  gap: 10px;
+}
+#productPageBody header .headerBox .headerMidBox .searchBox label {
+  cursor: pointer;
+  color: #008ecc;
+}
+#productPageBody header .headerBox .headerMidBox .searchBox input {
+  outline: none;
+  border: none;
+  background: none;
+  font-size: 1.1rem;
+  width: 100%;
+  color: #008ecc;
+}
+#productPageBody header .headerBox .headerMidBox .forBurger {
+  position: relative;
+}
+#productPageBody header .headerBox .headerMidBox .forBurger .fa-filter {
+  color: #008ecc;
+  padding: 5px;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+#productPageBody header .headerBox .headerMidBox .forBurger .fa-filter:hover {
+  background: #008ecc;
+  color: #f3f9fb;
+}
+#productPageBody header .headerBox .headerMidBox .forBurger .burgerContent {
+  position: absolute;
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  background: #f3f9fb;
+  border: 1px solid #008ecc;
+  border-radius: 8px;
+  gap: 100px;
+  color: #008ecc;
+  z-index: 29;
+  height: 75vh;
+  width: 300px;
+  top: 60px;
+  right: 0;
+}
+#productPageBody header .headerBox .headerMidBox .forBurger .burgerContent .category {
+  width: 100%;
+}
+#productPageBody header .headerBox .headerMidBox .forBurger .burgerContent .category .categotyDropDown {
+  position: relative;
+  cursor: pointer;
+}
+#productPageBody header .headerBox .headerMidBox .forBurger .burgerContent .category .categotyDropDown p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+#productPageBody header .headerBox .headerMidBox .forBurger .burgerContent .category .categotyDropDown p:hover {
+  background: #008ecc;
+  color: #ffffff;
+}
+#productPageBody header .headerBox .headerMidBox .forBurger .burgerContent .category .categotyDropDown .categoryList {
+  position: absolute;
+  z-index: 9;
+  top: 43px;
+  gap: 5px;
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
+  background: #f3f9fb;
+  border-radius: 12px;
+  height: 500px;
+}
+#productPageBody header .headerBox .headerMidBox .forBurger .burgerContent .category .categotyDropDown .categoryList span {
+  text-decoration: none;
+  border-radius: 10px;
+  color: #008ecc;
+  background: #f3f9fb;
+  line-height: 30px;
+}
+#productPageBody header .headerBox .headerMidBox .forBurger .burgerContent .category .categotyDropDown .categoryList span:hover {
+  color: #ffffff;
+  background: #008ecc;
+}
+#productPageBody header .headerBox .headerMidBox .forBurger .burgerContent .brands {
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+#productPageBody header .headerBox .headerMidBox .forBurger .burgerContent .brands p {
+  cursor: pointer;
+  width: 100%;
+}
+#productPageBody header .headerBox .headerMidBox .forBurger .burgerContent .brands p:hover {
+  background: #008ecc;
+  color: #ffffff;
+}
+#productPageBody header .headerBox .headerMidBox .forBurger .burgerContent .brands .brandsList {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  background: #f3f9fb;
+  z-index: 9;
+  top: 36px;
+  width: 100%;
+  border-radius: 8px;
+}
+#productPageBody header .headerBox .headerMidBox .forBurger .burgerContent .brands .brandsList span {
+  cursor: pointer;
+}
+#productPageBody header .headerBox .headerMidBox .forBurger .burgerContent .brands .brandsList span:hover {
+  background: #008ecc;
+  color: #ffffff;
+}
+#productPageBody header .headerBox .headerMidBox .forBurger .burgerContent .price {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#productPageBody header .headerBox .headerMidBox .forBurger .burgerContent .price .minMax {
+  display: flex;
+  gap: 5px;
+}
+#productPageBody header .headerBox .headerMidBox .forBurger .burgerContent .price .minMax input {
+  font-size: 1.1rem;
+  max-width: 50px;
+  border: 1px solid #008ecc;
+  border-radius: 3px;
+  padding: 3px;
+}
+#productPageBody header .headerBox .headerMidBox .forBurger .burgerContent .price .minMax input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+#productPageBody header .headerBox .headerMidBox .forBurger .burgerContent .price .forPriceFilter {
+  border: none;
+  background: #f3f9fb;
+  color: #008ecc;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #008ecc;
+  border-radius: 4px;
+}
+#productPageBody header .headerBox .headerMidBox .forBurger .burgerContent .price .forPriceFilter:hover {
+  color: #f3f9fb;
+  background: #008ecc;
+}
+#productPageBody header .headerBox .headerMidBox .forBurger .burgerContent .rating {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#productPageBody header .headerBox .headerMidBox .forBurger .burgerContent .rating .inpRate input {
+  font-size: 1.1rem;
+  max-width: 50px;
+  border: 1px solid #008ecc;
+  border-radius: 3px;
+  padding: 3px;
+}
+#productPageBody header .headerBox .headerMidBox .forBurger .burgerContent .rating .inpRate input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+#productPageBody header .headerBox .headerMidBox .forBurger .burgerContent .rating .forRatings {
+  border: none;
+  background: #f3f9fb;
+  color: #008ecc;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #008ecc;
+  border-radius: 4px;
+}
+#productPageBody header .headerBox .headerMidBox .forBurger .burgerContent .rating .forRatings:hover {
+  color: #f3f9fb;
+  background: #008ecc;
+}
+#productPageBody header .headerBox .headerRightBox {
+  gap: 10px;
+}
+#productPageBody header .headerBox .headerRightBox .logInBox {
+  color: #008ecc;
+  background: #f3f9fb;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 5px;
+}
+#productPageBody header .headerBox .headerRightBox .logInBox:hover {
+  color: #ffffff;
+  background: #008ecc;
+}
+#productPageBody header .headerBox .headerRightBox .logOutBox {
+  cursor: pointer;
+  display: none;
+  color: #008ecc;
+  background: #f3f9fb;
+  padding: 5px;
+  border-radius: 3px;
+}
+#productPageBody header .headerBox .headerRightBox .logOutBox:hover {
+  background: #008ecc;
+  color: #f3f9fb;
+}
+#productPageBody header .headerBox .headerRightBox .vertLine {
+  width: 1px;
+  height: 28px;
+  background: #ededed;
+}
+#productPageBody header .headerBox .headerRightBox .cartBox a {
+  border: 1px solid #008ecc;
+  border-radius: 3px;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #008ecc;
+  text-decoration: none;
+}
+#productPageBody header .headerBox .headerRightBox .cartBox a:hover {
+  background: #008ecc;
+  color: #f3f9fb;
+}
+#productPageBody header .headerBox .headerRightBox .cartBox a .cartCount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1px;
+  width: 25px;
+  height: 25px;
+  background: #f3f9fb;
+  color: #008ecc;
+  border: #008ecc 1px solid;
+  border-radius: 3px;
+}
+#productPageBody header .headerBox .controlPanel {
+  color: #008ecc;
+  font-size: 2rem;
+  display: none;
+  cursor: pointer;
+}
+@media (max-width: 1080px) {
+  #productPageBody header .headerBox .controlPanel {
+    display: flex;
+    position: relative;
+  }
+  #productPageBody header .headerBox .vertLine {
+    transform: rotate(90deg);
+  }
+  #productPageBody header .headerBox .headerRightBox {
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    display: none;
+    flex-direction: column;
+    z-index: 39;
+    width: 300px;
+    padding: 15px;
+    background: #f3f9fb;
+    border-radius: 8px;
+  }
+}
+#productPageBody main {
+  flex-direction: column;
+  gap: 25px;
+}
+#productPageBody main .productBox {
+  width: 80vw;
+  height: 100%;
+  position: relative;
+  display: flex;
+  gap: 50px;
+  padding: 5px;
+}
+#productPageBody main .productBox .detailImages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  width: 30%;
+  height: 100%;
+}
+#productPageBody main .productBox .detailImages .mainImage {
+  display: flex;
+  align-items: center;
+  max-width: 340px;
+  height: 340px;
+}
+#productPageBody main .productBox .detailImages .mainImage img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+#productPageBody main .productBox .detailImages .subImages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  max-width: 340px;
+}
+#productPageBody main .productBox .detailImages .subImages img {
+  max-width: 75px;
+  height: 75px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid #008ecc;
+}
+#productPageBody main .productBox .detailImages .subImages img:hover {
+  border: 3px solid #008ecc;
+}
+#productPageBody main .productBox .forDetails {
+  color: #008ecc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  width: 50%;
+  font-size: 1.2rem;
+}
+#productPageBody main .productBox .forDetails .stockAndCart {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+#productPageBody main .productBox .forDetails .stockAndCart .prodAddToCart {
+  border: 1px solid #008ecc;
+  padding: 4px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#productPageBody main .productBox .forDetails .stockAndCart .prodAddToCart:hover {
+  color: #f3f9fb;
+  background: #008ecc;
+}
+#productPageBody main .productBox .forDetails .prodDetailsAndRate {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#productPageBody .loginPopOut {
+  position: absolute;
+  top: 100px;
+  left: 35%;
+  z-index: 19;
+}
+#productPageBody .loginPopOut .signIn {
+  margin: 0 auto;
+  width: 30vw;
+  border: 1px solid #008ecc;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border-radius: 12px;
+  position: absolute;
+  left: 35%;
+  padding: 10px;
+  color: #008ecc;
+  background: #f3f9fb;
+}
+#productPageBody .loginPopOut .signIn i {
+  position: absolute;
+  cursor: pointer;
+  top: 10px;
+  right: 10px;
+  font-size: 1.2rem;
+}
+#productPageBody .loginPopOut .signIn h3 {
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+#productPageBody .loginPopOut .signIn input {
+  padding: 10px;
+  width: 90%;
+  border: 1px solid #008ecc;
+  border-radius: 8px;
+  outline: #008ecc;
+}
+#productPageBody .loginPopOut .signIn input::-moz-placeholder {
+  color: #008ecc;
+}
+#productPageBody .loginPopOut .signIn input::placeholder {
+  color: #008ecc;
+}
+#productPageBody .loginPopOut .signIn input:invalid {
+  border: 1px solid #ff0000;
+}
+#productPageBody .loginPopOut .signIn .registerBtn {
+  cursor: pointer;
+}
+#productPageBody .loginPopOut .signInSuccessful {
+  font-size: 2rem;
+  margin: 0 auto;
+  width: 30vw;
+  border: 1px solid #008ecc;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border-radius: 12px;
+  position: absolute;
+  left: 35%;
+  padding: 10px;
+  color: #008ecc;
+  background: #f3f9fb;
+  text-align: center;
+}
+#productPageBody .loginPopOut .signInSuccessful i {
+  font-size: 3rem;
+  cursor: pointer;
+}
+#productPageBody .loginPopOut .noSuccess {
+  font-size: 2rem;
+  margin: 0 auto;
+  width: 30vw;
+  border: 1px solid #008ecc;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border-radius: 12px;
+  position: absolute;
+  left: 35%;
+  padding: 10px;
+  color: #008ecc;
+  background: #f3f9fb;
+  text-align: center;
+}
+#productPageBody .loginPopOut .noSuccess i {
+  font-size: 3rem;
+  cursor: pointer;
+}
+#productPageBody .loginPopOut .register {
+  margin: 0 auto;
+  width: 30vw;
+  border: 1px solid #008ecc;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border-radius: 12px;
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  padding: 10px;
+  color: #008ecc;
+  background: #f3f9fb;
+}
+#productPageBody .loginPopOut .register i {
+  position: absolute;
+  cursor: pointer;
+  top: 10px;
+  right: 10px;
+  font-size: 1.2rem;
+}
+#productPageBody .loginPopOut .register h3 {
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+#productPageBody .loginPopOut .register input {
+  padding: 10px;
+  width: 90%;
+  border: 1px solid #008ecc;
+  border-radius: 8px;
+  outline: #008ecc;
+}
+#productPageBody .loginPopOut .register input::-moz-placeholder {
+  color: #008ecc;
+}
+#productPageBody .loginPopOut .register input::placeholder {
+  color: #008ecc;
+}
+#productPageBody .loginPopOut .register input:invalid {
+  border: 1px solid #ff0000;
+}
+#productPageBody .loginPopOut .register .gender {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+#productPageBody .loginPopOut .register .gender label {
+  display: flex;
+  gap: 3px;
+  cursor: pointer;
+}
+#productPageBody .loginPopOut .register .goBack {
+  cursor: pointer;
+}
+#productPageBody .blurBG {
   width: 100%;
   height: 100%;
   display: none;

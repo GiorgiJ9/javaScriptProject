@@ -4,7 +4,7 @@
   padding: 0px;
   margin: 0px;
 }
-body {
+#mainPageBody {
   background: $mainWhite;
   font-family: $fontOne;
   position: relative;
@@ -28,12 +28,54 @@ body {
       .headerLeftBox {
         @extend %flexCenter;
         gap: 16px;
+        .logo {
+          a {
+            text-decoration: none;
+            font-weight: 800;
+            color: $primirayClr;
+            font-size: 2.5rem;
+          }
+        }
+      }
+      .headerMidBox {
+        width: 35%;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        .searchBox {
+          @extend %flexCenter;
+          font-size: 1.1rem;
+          background: $primaryTxtBg;
+          padding: 0px 10px;
+          border-radius: 3px;
+          height: 48px;
+          width: 100%;
+          gap: 10px;
+          label {
+            cursor: pointer;
+            color: $primirayClr;
+          }
+          input {
+            outline: none;
+            border: none;
+            background: none;
+            font-size: 1.1rem;
+            width: 100%;
+            color: $primirayClr;
+          }
+        }
         .forBurger {
           position: relative;
-          .fa-bars {
+          .fa-filter {
             color: $primirayClr;
+            padding: 5px;
             font-size: 2rem;
             cursor: pointer;
+            border-radius: 5px;
+            &:hover{
+              background: $primirayClr;
+              color: $primaryTxtBg;
+            }
           }
           .burgerContent {
             position: absolute;
@@ -49,6 +91,7 @@ body {
             height: 75vh;
             width: 300px;
             top: 60px;
+            right: 0;
             .category {
               width: 100%;
               .categotyDropDown {
@@ -188,39 +231,6 @@ body {
             }
           }
         }
-        .logo {
-          a {
-            text-decoration: none;
-            font-weight: 800;
-            color: $primirayClr;
-            font-size: 2.5rem;
-          }
-        }
-      }
-      .headerMidBox {
-        width: 35%;
-        .searchBox {
-          @extend %flexCenter;
-          font-size: 1.1rem;
-          background: $primaryTxtBg;
-          padding: 0px 10px;
-          border-radius: 3px;
-          height: 48px;
-          width: 100%;
-          gap: 10px;
-          label {
-            cursor: pointer;
-            color: $primirayClr;
-          }
-          input {
-            outline: none;
-            border: none;
-            background: none;
-            font-size: 1.1rem;
-            width: 100%;
-            color: $primirayClr;
-          }
-        }
       }
       .headerRightBox {
         @extend %flexCenter;
@@ -255,12 +265,19 @@ body {
         }
         .cartBox {
           a {
+            border: 1px solid $primirayClr;
+            border-radius: 3px;
+            padding: 5px;
             cursor: pointer;
             display: flex;
             align-items: center;
             gap: 5px;
             color: $primirayClr;
             text-decoration: none;
+            &:hover{
+              background: $primirayClr;
+            color: $primaryTxtBg;
+            }
             .cartCount {
               display: flex;
               align-items: center;
@@ -269,10 +286,39 @@ body {
               width: 25px;
               height: 25px;
               background: $primaryTxtBg;
+              color: $primirayClr;
               border: $primirayClr 1px solid;
               border-radius: 3px;
             }
           }
+        }
+      }
+      .controlPanel {
+        color: $primirayClr;
+        font-size: 2rem;
+        display: none;
+        cursor: pointer;
+      }
+      @media (max-width: 1080px) {
+        .controlPanel {
+          display: flex;
+          position: relative;
+        }
+        .vertLine{
+          transform:rotate(90deg);
+        }
+        .headerRightBox {
+          font-size: 20px;
+          position: absolute;
+          right: 0;
+          top: 60px;
+          display: none;
+          flex-direction: column;
+          z-index: 39;
+          width: 300px;
+          padding: 15px;
+          background: $primaryTxtBg;
+          border-radius: 8px
         }
       }
     }
@@ -362,6 +408,564 @@ body {
           .addToCart {
             cursor: pointer;
           }
+        }
+      }
+    }
+  }
+  .loginPopOut {
+    position: absolute;
+    top: 100px;
+    left: 35%;
+    z-index: 19;
+    .signIn {
+      margin: 0 auto;
+      width: 30vw;
+      border: 1px solid $primirayClr;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      border-radius: 12px;
+      position: absolute;
+      left: 35%;
+      padding: 10px;
+      color: $primirayClr;
+      background: $primaryTxtBg;
+      i {
+        position: absolute;
+        cursor: pointer;
+        top: 10px;
+        right: 10px;
+        font-size: 1.2rem;
+      }
+      h3 {
+        text-align: center;
+        user-select: none;
+      }
+      input {
+        padding: 10px;
+        width: 90%;
+        border: 1px solid $primirayClr;
+        border-radius: 8px;
+        outline: $primirayClr;
+        &::placeholder {
+          color: $primirayClr;
+        }
+        &:invalid {
+          border: 1px solid #ff0000;
+        }
+      }
+      .myBtn {
+        @extend %myBtn;
+      }
+      .registerBtn {
+        cursor: pointer;
+      }
+    }
+    .signInSuccessful {
+      font-size: 2rem;
+      margin: 0 auto;
+      width: 30vw;
+      border: 1px solid $primirayClr;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      border-radius: 12px;
+      position: absolute;
+      left: 35%;
+      padding: 10px;
+      color: $primirayClr;
+      background: $primaryTxtBg;
+      text-align: center;
+      i {
+        font-size: 3rem;
+        cursor: pointer;
+      }
+    }
+    .noSuccess {
+      font-size: 2rem;
+      margin: 0 auto;
+      width: 30vw;
+      border: 1px solid $primirayClr;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      border-radius: 12px;
+      position: absolute;
+      left: 35%;
+      padding: 10px;
+      color: $primirayClr;
+      background: $primaryTxtBg;
+      text-align: center;
+      i {
+        font-size: 3rem;
+        cursor: pointer;
+      }
+    }
+    .register {
+      margin: 0 auto;
+      width: 30vw;
+      border: 1px solid $primirayClr;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      border-radius: 12px;
+      position: absolute;
+      top: 50%;
+      left: 35%;
+      padding: 10px;
+      color: $primirayClr;
+      background: $primaryTxtBg;
+      i {
+        position: absolute;
+        cursor: pointer;
+        top: 10px;
+        right: 10px;
+        font-size: 1.2rem;
+      }
+      h3 {
+        text-align: center;
+        user-select: none;
+      }
+      input {
+        padding: 10px;
+        width: 90%;
+        border: 1px solid $primirayClr;
+        border-radius: 8px;
+        outline: $primirayClr;
+        &::placeholder {
+          color: $primirayClr;
+        }
+        &:invalid {
+          border: 1px solid #ff0000;
+        }
+      }
+      .gender {
+        display: flex;
+        gap: 25px;
+        justify-content: center;
+        label {
+          display: flex;
+          gap: 3px;
+          cursor: pointer;
+        }
+      }
+      .forReg {
+        @extend %myBtn;
+      }
+      .goBack {
+        cursor: pointer;
+      }
+    }
+  }
+  .blurBG {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    top: 0;
+    z-index: 9;
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+#productPageBody {
+  background: $mainWhite;
+  font-family: $fontOne;
+  position: relative;
+  .show {
+    display: flex !important;
+  }
+  .hide {
+    display: none !important;
+  }
+  .yTranslate {
+    transform: rotate(180deg) !important;
+  }
+  header {
+    @extend %flexCenter;
+    height: 90px;
+    .headerBox {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 80vw;
+      .headerLeftBox {
+        @extend %flexCenter;
+        gap: 16px;
+        .logo {
+          a {
+            text-decoration: none;
+            font-weight: 800;
+            color: $primirayClr;
+            font-size: 2.5rem;
+          }
+        }
+      }
+      .headerMidBox {
+        width: 35%;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        .searchBox {
+          @extend %flexCenter;
+          font-size: 1.1rem;
+          background: $primaryTxtBg;
+          padding: 0px 10px;
+          border-radius: 3px;
+          height: 48px;
+          width: 100%;
+          gap: 10px;
+          label {
+            cursor: pointer;
+            color: $primirayClr;
+          }
+          input {
+            outline: none;
+            border: none;
+            background: none;
+            font-size: 1.1rem;
+            width: 100%;
+            color: $primirayClr;
+          }
+        }
+        .forBurger {
+          position: relative;
+          .fa-filter {
+            color: $primirayClr;
+            padding: 5px;
+            font-size: 2rem;
+            cursor: pointer;
+            border-radius: 5px;
+            &:hover{
+              background: $primirayClr;
+              color: $primaryTxtBg;
+            }
+          }
+          .burgerContent {
+            position: absolute;
+            display: none;
+            align-items: center;
+            flex-direction: column;
+            background: $primaryTxtBg;
+            border: 1px solid $primirayClr;
+            border-radius: 8px;
+            gap: 100px;
+            color: $primirayClr;
+            z-index: 29;
+            height: 75vh;
+            width: 300px;
+            top: 60px;
+            right: 0;
+            .category {
+              width: 100%;
+              .categotyDropDown {
+                position: relative;
+                cursor: pointer;
+                p {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 5px;
+                  @extend %forCategory;
+                  &:hover {
+                    background: $primirayClr;
+                    color: $mainWhite;
+                  }
+                }
+                .categoryList {
+                  position: absolute;
+                  z-index: 9;
+                  top: 43px;
+                  gap: 5px;
+                  display: none;
+                  width: 100%;
+                  flex-direction: column;
+                  text-align: center;
+                  background: $primaryTxtBg;
+                  border-radius: 12px;
+                  height: 500px;
+                  span {
+                    text-decoration: none;
+                    border-radius: 10px;
+                    color: $primirayClr;
+                    background: $primaryTxtBg;
+                    line-height: 30px;
+                    &:hover {
+                      color: $mainWhite;
+                      background: $primirayClr;
+                    }
+                  }
+                }
+              }
+            }
+            .brands {
+              width: 100%;
+              position: relative;
+              text-align: center;
+              p {
+                cursor: pointer;
+                @extend %forCategory;
+                width: 100%;
+                &:hover {
+                  background: $primirayClr;
+                  color: $mainWhite;
+                }
+              }
+              .brandsList {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+                background: $primaryTxtBg;
+                z-index: 9;
+                top: 36px;
+                width: 100%;
+                border-radius: 8px;
+                span {
+                  cursor: pointer;
+                  @extend %forCategory;
+                  &:hover {
+                    background: $primirayClr;
+                    color: $mainWhite;
+                  }
+                }
+              }
+            }
+            .price {
+              display: flex;
+              flex-direction: column;
+              gap: 15px;
+              .minMax {
+                display: flex;
+                gap: 5px;
+                input {
+                  font-size: 1.1rem;
+                  max-width: 50px;
+                  border: 1px solid $primirayClr;
+                  border-radius: 3px;
+                  padding: 3px;
+                  &::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                  }
+                }
+              }
+              .forPriceFilter {
+                border: none;
+                background: $primaryTxtBg;
+                color: $primirayClr;
+                cursor: pointer;
+                padding: 10px;
+                border: 1px solid $primirayClr;
+                border-radius: 4px;
+                &:hover {
+                  color: $primaryTxtBg;
+                  background: $primirayClr;
+                }
+              }
+            }
+            .rating {
+              display: flex;
+              flex-direction: column;
+              gap: 15px;
+              .inpRate {
+                input {
+                  font-size: 1.1rem;
+                  max-width: 50px;
+                  border: 1px solid $primirayClr;
+                  border-radius: 3px;
+                  padding: 3px;
+                  &::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                  }
+                }
+              }
+              .forRatings {
+                border: none;
+                background: $primaryTxtBg;
+                color: $primirayClr;
+                cursor: pointer;
+                padding: 10px;
+                border: 1px solid $primirayClr;
+                border-radius: 4px;
+                &:hover {
+                  color: $primaryTxtBg;
+                  background: $primirayClr;
+                }
+              }
+            }
+          }
+        }
+      }
+      .headerRightBox {
+        @extend %flexCenter;
+        gap: 10px;
+        .logInBox {
+          color: $primirayClr;
+          background: $primaryTxtBg;
+          cursor: pointer;
+          border-radius: 3px;
+          padding: 5px;
+          &:hover {
+            color: $mainWhite;
+            background: $primirayClr;
+          }
+        }
+        .logOutBox {
+          cursor: pointer;
+          display: none;
+          color: $primirayClr;
+          background: $primaryTxtBg;
+          padding: 5px;
+          border-radius: 3px;
+          &:hover {
+            background: $primirayClr;
+            color: $primaryTxtBg;
+          }
+        }
+        .vertLine {
+          width: 1px;
+          height: 28px;
+          background: $linePrimaryClr;
+        }
+        .cartBox {
+          a {
+            border: 1px solid $primirayClr;
+            border-radius: 3px;
+            padding: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: $primirayClr;
+            text-decoration: none;
+            &:hover{
+              background: $primirayClr;
+            color: $primaryTxtBg;
+            }
+            .cartCount {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 1px;
+              width: 25px;
+              height: 25px;
+              background: $primaryTxtBg;
+              color: $primirayClr;
+              border: $primirayClr 1px solid;
+              border-radius: 3px;
+            }
+          }
+        }
+      }
+      .controlPanel {
+        color: $primirayClr;
+        font-size: 2rem;
+        display: none;
+        cursor: pointer;
+      }
+      @media (max-width: 1080px) {
+        .controlPanel {
+          display: flex;
+          position: relative;
+        }
+        .vertLine{
+          transform:rotate(90deg);
+        }
+        .headerRightBox {
+          font-size: 20px;
+          position: absolute;
+          right: 0;
+          top: 60px;
+          display: none;
+          flex-direction: column;
+          z-index: 39;
+          width: 300px;
+          padding: 15px;
+          background: $primaryTxtBg;
+          border-radius: 8px
+        }
+      }
+    }
+  }
+  main {
+    @extend %flexCenter;
+    flex-direction: column;
+    gap: 25px;
+    .productBox {
+      width: 80vw;
+      height: 100%;
+      position: relative;
+      display: flex;
+      gap: 50px;
+      padding: 5px;
+      .detailImages {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        width: 30%;
+        height: 100%;
+        .mainImage {
+          display: flex;
+          align-items: center;
+          max-width: 340px;
+          height: 340px;
+          img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+          }
+        }
+        .subImages {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 5px;
+          max-width: 340px;
+          img {
+            max-width: 75px;
+            height: 75px;
+            // height: auto;
+            // width: 100%;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 1px solid $primirayClr;
+            &:hover {
+              border: 3px solid $primirayClr;
+            }
+          }
+        }
+      }
+      .forDetails {
+        color: $primirayClr;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+        width: 50%;
+        font-size: 1.2rem;
+        .stockAndCart {
+          display: flex;
+          gap: 50px;
+          align-items: center;
+          .prodAddToCart {
+            border: 1px solid $primirayClr;
+            padding: 4px;
+            border-radius: 5px;
+            cursor: pointer;
+            &:hover {
+              color: $primaryTxtBg;
+              background: $primirayClr;
+            }
+          }
+        }
+        .prodDetailsAndRate {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
         }
       }
     }
